@@ -1,0 +1,33 @@
+_exclude:
+  - .git
+  - LICENSE
+  - README.md
+  - .changes
+  - .changie.yaml
+  - CHANGELOG.md
+repo_name:
+  type: str
+repo_owner:
+  type: str
+clusters:
+  type: yaml
+  multiline: true
+  default:
+    - name: dev1
+      region: eu-west-1
+      apps: apps/dev
+      infrastructure:
+        controllers: null
+        configs: null
+    - name: staging1
+      region: eu-west-1
+      apps: apps/staging
+      infrastructure:
+        controllers: null
+        configs: null
+    - name: prod1
+      region: eu-west-1
+      apps: apps/prod
+      infrastructure:
+        controllers: null
+        configs: null

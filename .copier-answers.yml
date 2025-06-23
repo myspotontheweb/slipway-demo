@@ -1,0 +1,24 @@
+# Changes here will be overwritten by Copier
+_commit: 0.3.1
+_src_path: gh:myspotontheweb/slipway
+clusters:
+-   apps: apps/dev
+    infrastructure:
+        configs: null
+        controllers: null
+    name: dev1
+    region: eu-west-1
+-   apps: apps/staging
+    infrastructure:
+        configs: null
+        controllers: null
+    name: staging1
+    region: eu-west-1
+-   apps: apps/prod
+    infrastructure:
+        configs: null
+        controllers: null
+    name: prod1
+    region: eu-west-1
+repo_name: slipway-demo
+repo_owner: myspotontheweb

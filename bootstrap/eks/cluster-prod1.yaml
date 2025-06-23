@@ -1,0 +1,19 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: prod1
+  region: eu-west-1
+  version: "1.32"
+
+autoModeConfig:
+  enabled: true
+
+gitops:
+  flux:
+    gitProvider: github
+    flags:
+      owner: myspotontheweb
+      repository: slipway-demo
+      branch: main
+      path: clusters/prod1
