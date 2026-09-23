@@ -32,10 +32,10 @@ export HYGEN_TMPLS=$(git rev-parse --show-toplevel)/libs/slipway/_templates
 
 TODO
 
-### Launch a cluster
+### Launch a cluster
 
 TODO
 
-### Cleanup
+### Cleanup
 
 TODO
