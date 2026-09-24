@@ -4,6 +4,9 @@ metadata:
   name: plugin-barman-cloud 
   namespace: cnpg
 spec:
+  dependsOn:
+    - name: cert-manager
+      nmespace: cert-manager
   interval: 30m
   chart:
     spec:
