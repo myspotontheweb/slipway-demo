@@ -76,14 +76,17 @@ sops -e -i flux/infrastructure/core/$CLUSTER/sops-age.sops.yaml
 
 ### Launch a cluster
 
+Start a local cluster for testing
+
 ```bash
-eksctl create cluster -f eks/config/dev1.yaml
+colima start --profile local-dev --kubernetes --kubernetes-version v1.37.0+k3s1 --cpus 4 --memory 8 --network-address
 ```
+
 
 Bootstrap FluxCD
 
 ```bash
-export CONTEXT=eksctl
+export CONTEXT=colima-local-dev
 export CLUSTER=dev1
 export GIT_OWNER=myspotontheweb
 export GIT_REPO=slipway-demo
@@ -101,7 +104,7 @@ flux bootstrap github --context $CONTEXT --owner=$GIT_OWNER --repository=$GIT_RE
 ## Cleanup
 
 ```bash
-eksctl delete cluster -f eks/config/dev1.yaml
+colima delete local-dev
 ```
 
 ## Testing
