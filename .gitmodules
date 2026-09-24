@@ -1,0 +1,3 @@
+[submodule "libs/slipway"]
+	path = libs/slipway
+	url = https://github.com/myspotontheweb/slipway.git

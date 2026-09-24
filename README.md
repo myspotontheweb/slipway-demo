@@ -12,8 +12,6 @@ Configure the [Slipway project](https://github.com/myspotontheweb/slipway) as a 
 
 ```bash
 git submodule add https://github.com/myspotontheweb/slipway.git libs/slipway
-
-ln -s libs/slipway/_templates .
 ```
 
 ### Install software
