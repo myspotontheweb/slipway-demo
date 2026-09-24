@@ -83,18 +83,19 @@ eksctl create cluster -f eks/config/dev1.yaml
 Bootstrap FluxCD
 
 ```bash
-export CLUSTER=dev1
 export CONTEXT=eksctl
+export CLUSTER=dev1
 export GIT_OWNER=myspotontheweb
 export GIT_REPO=slipway-demo
 export GIT_BRANCH=main
-export GIT_TOKEN=$(gh auth token)
+export GITHUB_TOKEN=$(gh auth token)
 
 # Flux secret
+kubectl create ns flux-system --context $CONTEXT
 sops -d flux/infrastructure/core/$CLUSTER/sops-age.sops.yaml | kubectl apply -f - --context $CONTEXT
 
 # Bootstrap
-flux bootstrap github --context $CONTEXT --owner=$GIT_OWNER --repository=$GIT_REPO --branch=$GIT_BRANCH --path=clusters/$CLUSTER
+flux bootstrap github --context $CONTEXT --owner=$GIT_OWNER --repository=$GIT_REPO --branch=$GIT_BRANCH --path=flux/clusters/$CLUSTER
 ```
 
 ## Cleanup
