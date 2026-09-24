@@ -6,7 +6,7 @@ metadata:
 spec:
   dependsOn:
     - name: cert-manager
-      nmespace: cert-manager
+      namespace: cert-manager
   interval: 30m
   chart:
     spec:
