@@ -1,0 +1,32 @@
+apiVersion: v1
+data:
+    age.agekey: ENC[AES256_GCM,data:9jYKxZflBQegxlLuBAnvQITgoKNC8lUvCVle6+5/86uWTrArY3/1GlMZf717CM6h0zRGa3ZVnuUc6zvGQIoIGiEIfolLj6C466KpRe8sc96Na3BU51+imVdQNZFrdRQyJLJSvBnh47+Fp87LTcUoMBOsJo+LQ+eoHfIiSiZB+vYF8pL1CVun0aI111wbovJh8PlMdiv1I52RDNnB4ADw/9kExfrkFRB6WCjd5TO84iwPIqf2FQVyuLduBLqxsr8FhZDEAeJWj37vu6uGE8lZSt6zDu5GSxlVTiiP17PMDH+mu4y1fO/w0Aci49eCPDvLNZDWbrNV4j8a7tw1,iv:tz/kclyehVExNaaOIn/g79fjL1xqY0IAzmUOOy6R52o=,tag:aybVOVSUU4eq9a9dCo/HKA==,type:str]
+kind: Secret
+metadata:
+    name: sops-age
+    namespace: flux-system
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSVUVZVnRWZzN0cEsyWWxm
+            M3dHaEFYcElRczFId202MXR0emJObUtsaGxNCmdDRGMzRVBEN3VrelJua0xmTCto
+            VXYrY29wcGpvdkcvalR6YzFoa3poRDQKLS0tIEMzWFhqVWxHSzVLV2ZvbGMrTjRl
+            Q3RCZ1ZYU0NFc1h3bzN4RFk0SzhPV1EKZJiv+Ian58+DOd0GcTW3KHff/NtozSk0
+            PRybB7qQ9NuYkLLC6JMPVgdQ5VRshxn2D8mS4PAxhYbJ7hqOgLrgjw==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age16ew0mct5wy0xhtwvfxyvk6xv9tx2xnf5rklafac7ay8grd5mfqmsyk6wfe
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IHNzaC1lZDI1NTE5IFBWNHpPZyAyelVU
+            U2lRVHBRTmdkVzZ3UU1nOExVTXlkUFA3RG1ISUNGN05xRWJSODFFCkVRYnYyWWdk
+            dUdHdU1PNXFnZXhtTDNvc0JHcHhzL2o2ZE5FekFzR3pCVGMKLS0tIE1YVyt4ZjZD
+            R0lTQmx4NklHc1lQVzRLSWFJUHR4NGJoblFLYk5hMDlPMWsKE3w0px0Zt8E+irqn
+            XE1HDO1sAsO/M1s5DrF4Yz1tlmsDsIX6cGhtITl09yp+nvaWO18eoHd9IH04lPT1
+            vpbaDw==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPlzHj1QJ0intZQFQ78r2hdzCoN6V71WnMyNpUGHk93 markoconnor@IOPCIS-MOCO01.local
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-09-24T13:51:45Z"
+    mac: ENC[AES256_GCM,data:QyQvIt1+BEH2jcCJS+vTFlfo/fvyjpPfq+fCYhnyMxMpMvAu08DNBWg8BdTAS4SCI5Vb88nXSVtEu0drvkLKXi0lb2zqLYlr1WzYgW8rSdbk1VA5h7wzT3U45OuX0sqW+F2MsLJglp7/nv6TheQksQklLrVU4559oUpvhKKOV5U=,iv:xWTn+LOEbI2tuyVjHa17ynRU+zcGWjPmuSX45ae+OCg=,tag:XzZ86DRsp2shx/AUj6Qnvg==,type:str]
+    version: 3.13.3

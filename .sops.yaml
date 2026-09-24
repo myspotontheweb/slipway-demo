@@ -1,0 +1,8 @@
+
+creation_rules:
+  - path_regex: flux/infrastructure/core/dev1/.*\.sops\.yaml$
+    encrypted_regex: ^(data|stringData)$
+    key_groups:
+      - age:
+          - age16ew0mct5wy0xhtwvfxyvk6xv9tx2xnf5rklafac7ay8grd5mfqmsyk6wfe
+          - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJPlzHj1QJ0intZQFQ78r2hdzCoN6V71WnMyNpUGHk93 markoconnor@IOPCIS-MOCO01.local

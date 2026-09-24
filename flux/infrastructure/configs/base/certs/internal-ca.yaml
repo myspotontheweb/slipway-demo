@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: my-internal-ca
+  namespace: cert-manager # Store root CA secret in a secure namespace
+spec:
+  isCA: true
+  commonName: "My Internal Root CA"
+  secretName: root-ca-secret
+  privateKey:
+    algorithm: ECDSA
+    size: 256
+  issuerRef:
+    name: selfsigned-bootstrap-issuer
+    kind: ClusterIssuer

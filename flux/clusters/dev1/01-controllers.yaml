@@ -1,0 +1,23 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: infra-controllers
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: infra-core
+  interval: 1h
+  retryInterval: 2m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  path: flux/infrastructure/controllers/overlays/cloudstack
+  prune: true
+  wait: true
+  postBuild:
+    substitute:
+      CERT_MANAGER_VERSION: "v1.21.2"
+      TRUST_MANAGER_VERSION: "v0.25.0"
+      CNPG_VERSION: "0.29.0"
+      BARMAN_PLUGIN_VERSION: "0.8.0"
