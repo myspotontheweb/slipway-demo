@@ -14,7 +14,7 @@ Configure the [Slipway project](https://github.com/myspotontheweb/slipway) as a 
 git submodule add https://github.com/myspotontheweb/slipway.git libs/slipway
 ```
 
-## Brew file
+## Generate Brewfile
 
 ```bash
 hygen slipway Brewfile
