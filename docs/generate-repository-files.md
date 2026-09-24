@@ -20,7 +20,7 @@ git submodule add https://github.com/myspotontheweb/slipway.git libs/slipway
 hygen slipway Brewfile
 ```
 
-### Generate GitOps Manifests
+## Generate GitOps Manifests
 
 ```bash
 export CLUSTER=dev1
@@ -33,7 +33,7 @@ hygen slipway cluster --name $CLUSTER
 hygen slipway eksctl --name $CLUSTER --region eu-west-1
 ```
 
-### Secret Management (SOPS)
+## Secret Management (SOPS)
 
 ```bash
 export CLUSTER=dev1
