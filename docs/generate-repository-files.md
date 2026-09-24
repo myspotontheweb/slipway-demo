@@ -33,7 +33,7 @@ hygen slipway cluster --name $CLUSTER
 hygen slipway eksctl --name $CLUSTER --region eu-west-1
 ```
 
-### Prepare cluster secrets
+### Secret Management (SOPS)
 
 ```bash
 export CLUSTER=dev1
